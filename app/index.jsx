@@ -8,9 +8,9 @@ import CustomButton from "../components/customButton";
 import { Redirect, router } from "expo-router";
 import { useGlobalContext } from "../context/GlobaleProvider";
 const App = () => {
-  const { loading, isLogged } = useGlobalContext();
+  const { isLoading, isLogged } = useGlobalContext();
 
-  if (!loading && isLogged) return <Redirect href="/home" />;
+  if (!isLoading && isLogged) return <Redirect href="/home" />;
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView
